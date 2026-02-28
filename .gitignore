@@ -1,8 +1,54 @@
-*.js
-!jest.config.js
-*.d.ts
-node_modules
+# ==========================
+# Scala / SBT build output
+# ==========================
+# Top-level target
+/target/
+/target/streams/
+/target/scala-3.3.2/
+/target/scala-2.12/
+/target/scala-*/lambda-project-fat.jar
 
-# CDK asset staging directory
-.cdk.staging
-cdk.out
+# Project meta-targets
+/project/target/
+/project/project/target/
+/project/project/project/target/
+/project/project/project/project/target/
+
+# SBT streams and caches
+/project/project/target/config-classes/
+/project/project/target/streams/
+/project/project/target/streams/_global/
+/project/project/target/streams/compile/
+/project/project/target/streams/runtime/
+/project/target/streams/
+/project/target/streams/_global/
+/project/target/streams/compile/
+/project/target/streams/runtime/
+
+# Optional: remove intermediate copy-resource/update cache files
+/project/project/target/**/$*.class
+/project/project/target/**/$*.cache
+/target/**/$*.class
+/target/**/$*.cache
+
+# ==========================
+# Node / JS / TypeScript
+# ==========================
+node_modules/
+*.js
+*.d.ts
+!jest.config.js
+
+# ==========================
+# CDK / AWS deployment artifacts
+# ==========================
+.cdk.staging/
+cdk.out/
+
+# ==========================
+# IDE / OS files
+# ==========================
+.idea/
+.vscode/
+.DS_Store
+*.log
