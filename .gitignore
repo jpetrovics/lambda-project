@@ -1,54 +1,54 @@
 # ==========================
-# Scala / SBT build output
+# Scala / sbt
 # ==========================
-# Top-level target
-/target/
-/target/streams/
-/target/scala-3.3.2/
-/target/scala-2.12/
+**/target/
+**/project/project/
+**/project/target/
+.bsp/
+.metals/
+.ammonite/
+.scala-build/
+*.class
+*.cache
 /target/scala-*/lambda-project-fat.jar
 
-# Project meta-targets
-/project/target/
-/project/project/target/
-/project/project/project/target/
-/project/project/project/project/target/
-
-# SBT streams and caches
-/project/project/target/config-classes/
-/project/project/target/streams/
-/project/project/target/streams/_global/
-/project/project/target/streams/compile/
-/project/project/target/streams/runtime/
-/project/target/streams/
-/project/target/streams/_global/
-/project/target/streams/compile/
-/project/target/streams/runtime/
-
-# Optional: remove intermediate copy-resource/update cache files
-/project/project/target/**/$*.class
-/project/project/target/**/$*.cache
-/target/**/$*.class
-/target/**/$*.cache
-
 # ==========================
-# Node / JS / TypeScript
+# Node / TypeScript
 # ==========================
 node_modules/
-*.js
-*.d.ts
+dist/
+lib/*.js
+lib/*.d.ts
+bin/*.js
+bin/*.d.ts
+test/*.js
+test/*.d.ts
+*.tsbuildinfo
+coverage/
+.npm
+.eslintcache
+
+# Ensure config files are NOT ignored
 !jest.config.js
+!cdk.json
+!tsconfig.json
 
 # ==========================
-# CDK / AWS deployment artifacts
+# CDK / AWS
 # ==========================
 .cdk.staging/
 cdk.out/
+cdk.context.json
 
 # ==========================
-# IDE / OS files
+# IDE / OS / Env
 # ==========================
 .idea/
+*.iml
 .vscode/
+.history/
+.env
+.env.*
 .DS_Store
+Thumbs.db
 *.log
